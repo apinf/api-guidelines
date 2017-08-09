@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [First Chapter](chapter1.md)
 * [General guidelines](general-guidelines.md)
-* Versioning
+* [Versioning](versioning.md)
 * URL Structure
 * Error handling
 * Response codes
