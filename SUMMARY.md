@@ -9,5 +9,4 @@
 * [Date and Time formatting](date-and-time-formatti.md)
 * [Documentation](documentation.md)
 * [Versioning](versioning.md)
-* [Versioning](versioning.md)
 
