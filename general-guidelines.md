@@ -1,6 +1,10 @@
 ### General guidelines
 
-The URL is a sentence, where HTTP methods are verbs and resources are nouns.
+APIs' functionalities is kept as simple as possible.
+
+No overlapping functionalities is implemented. 
+
+Each API \(or bundle of APIs\) generate swagger document. 
 
 
 

@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [General guidelines](general-guidelines.md)
-* URL Structure
+* [URL Structure](url-structure.md)
 * Response codes
 * Error handling
 * Pagination
