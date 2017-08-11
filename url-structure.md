@@ -1,10 +1,8 @@
 ### Request structure
 
-
-
 #### URL Structure
 
-The URL is a sentence, where HTTP methods are verbs and resources are nouns.
+The URL is a sentence, where HTTP methods are **verbs **and resources are **nouns**.
 
 #### HTTP methods \(verbs\)
 
@@ -20,7 +18,7 @@ The URL is a sentence, where HTTP methods are verbs and resources are nouns.
     E.g. When requested with same parameters: at first time new Manager is created, at second time an error response \(manager already exists\) is gotten.
 
 * PUT method requests the server to update resource.  
-  In our APIs it is not possible to create a resource with PUT method, because resources are referenced with :id. In case resource with :id does not exist, a response with 404 Resource not found is sent.
+  In our APIs it is not possible to create a resource with PUT method, because resources are referenced with :id. In case resource with :id does not exist, a response with `404 Resource not found` is sent.
 
   E.g. `/organizations/:id` will request the server to update the resource \(identified with :id\) in Organizations collection.
 
@@ -46,8 +44,6 @@ The resource is always a noun in plural in the API endpoint and if we want to ac
 
 The paths should contain the **plural form of resources** and the HTTP method should define the **kind of action** to be performed on the resource. The actual API functionality is implemented under the endpoint.
 
-
-
 #### Request parameters
 
 There are three ways to give parameters in request.
@@ -62,33 +58,25 @@ In next example there are two parameters provided as part of URL.
 
 `GET /organizations/:id/managers/:managerId`
 
-Parameter :id refers to Organization ID. Parameter :managerId refers to Manager ID.
-
-
+Parameter :id refers to Organization ID. Parameter :managerId refers to Manager ID. As a response \(if found\) is returned Manager managerId in Organization :id.
 
 ##### Parameters as query parameters
 
-In next example are queried Users, who's document in database contains string `apinf` in field username  or in field company name or in field email address. In case those are found, for pagination, fifteen first documents are skipped and then next five documents are returned as response.
+Query parameters can be appended in GET method.
 
-As a convention the query condition parameter is named as `q`. The convention for naming pagination parameters is to use names `skip` and `limit`.
+The parameters can be used in filterin dataset. As a convention the query condition parameter is named as `q`.
 
-GET /users?q=apinf&skip=15&limit=5
+In next example are queried Users, who's document in database contains string `apinf` in field username  or in field company name or in field email address. 
 
+`GET /users?q=apinf`
 
+In case the dataset is large, the query parameters can be used in pagination. The convention for naming pagination parameters is to use names `skip` and `limit`.
+
+In next example fifteen first documents are skipped and then next five documents are returned as response.
+
+`GET /users?q=apinf&skip=15&limit=5`
 
 ##### Parameters in body
 
 In case methods POST or PUT is used, the necessary parameters are included in request body as type JSON. Because the parameters usually refer to fields in database, the convention for parameter naming is to use camelCase in order to maintain consistency.
-
-
-
-
-
-
-
-
-
-
-
-
 
