@@ -6,11 +6,10 @@ Swagger document generation relies on Restivus Swagger plugin \([https://github.
 
 For APInf developer point of view an API consists of two or more files.
 
-In swagger object definition file the swagger object is defined, attached and a route for swagger is defined.
+* In **swagger object definition file** the swagger object is defined, attached and a route for swagger is defined.
+* In **functionality and swager metadata files** the actual functionality is implemented and the swagger metadata is defined for each endpoint in swagger attribute.
 
-In functionality and swager metadata files the actual functionality is implemented and the swagger metadata is defined for each endpoint in swagger attribute.
-
-At the moment there are two APIs implemented.
+At the moment there are following APIs implemented.
 
 **Catalog API** contains API management functionality.
 
