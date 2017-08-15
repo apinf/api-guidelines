@@ -8,7 +8,7 @@ The following are the important categorization of HTTP codes:
 
 These status codes represent that the requested action was received and successfully processed by the server.
 
-**200 Ok** The standard HTTP response representing success for GET, PUT or POST.
+**200 Ok** The standard HTTP response representing success for GET, PUT and POST.
 
 **201 Created** This status code should be returned whenever the new instance is created. E.g on creating a new instance, using POST method, should always return 201 status code.
 
@@ -16,7 +16,7 @@ These status codes represent that the requested action was received and successf
 
 DELETE can be a good example of this.
 
-The API DELETE /companies/43/employees/2 will delete the employee 2 and in return we do not need any data in the response body of the API, as we explicitly asked the system to delete. If there is any error, like if employee 2 does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
+The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` and in return we do not need any data in the response body of the API, as we explicitly asked the system to delete. If there is any error, like if manager `:managerId`does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
 
 ### 3xx \(Redirection Category\)
 
