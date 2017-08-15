@@ -12,6 +12,6 @@
 * [Response Codes](response-codes.md)
 * [Documentation](documentation.md)
 * [Versioning](versioning.md)
-* [Change log](change-log.md)
 * [Sources](sources.md)
+* [Change log](change-log.md)
 

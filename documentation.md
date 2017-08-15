@@ -19,7 +19,7 @@ At the moment there are following APIs implemented.
 
 * functionality and swagger metadata: /packages/apis/server/api.js
 
-* link to created JSON file for swagger document: 
+* link to created JSON file for swagger document: &lt;path&gt;/catalog.json
 
 **Management API** contains Organization and Users management functionality.
 
@@ -29,7 +29,7 @@ At the moment there are following APIs implemented.
 
 * functionality and swagger metadata for users: /users/collection/server/api.js
 
-* link to created JSON file for swagger document: 
+* link to created JSON file for swagger document: &lt;path&gt;/management.json
 
 
 
