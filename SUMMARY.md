@@ -13,4 +13,5 @@
 * [Documentation](documentation.md)
 * [Versioning](versioning.md)
 * [Change log](change-log.md)
+* [Sources](sources.md)
 

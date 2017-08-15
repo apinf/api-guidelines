@@ -1,5 +1,7 @@
 ### Documentation
 
+The APInf convention in API documentation is following:
+
 Each \(for User point of view\) API generates own swagger document about it's functionality.
 
 Swagger document generation relies on Restivus Swagger plugin \([https://github.com/apinf/restivus-swagger\](https://github.com/apinf/restivus-swagger%29\).
@@ -17,6 +19,8 @@ At the moment there are following APIs implemented.
 
 * functionality and swagger metadata: /packages/apis/server/api.js
 
+* link to created JSON file for swagger document: 
+
 **Management API** contains Organization and Users management functionality.
 
 * swagger object definition: /packages/rest\_apis/management.js
@@ -24,6 +28,8 @@ At the moment there are following APIs implemented.
 * functionality and swagger metadata for organizations: /packages/organizations/server/api.js
 
 * functionality and swagger metadata for users: /users/collection/server/api.js
+
+* link to created JSON file for swagger document: 
 
 
 
