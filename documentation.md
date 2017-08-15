@@ -6,6 +6,10 @@ Each \(for User point of view\) API generates own swagger document about it's fu
 
 Swagger document generation relies on Restivus Swagger plugin \([https://github.com/apinf/restivus-swagger\](https://github.com/apinf/restivus-swagger%29\).
 
+Documentation is written in Restivus Swagger documentation description fields. 
+
+Note! When backticks \(\`\`\) instead of single quotes \(''\) are used as documentation field separators, multiline documentation with markdown can be written.
+
 For APInf developer point of view an API consists of two or more files.
 
 * In **swagger object definition file** the swagger object is defined, attached and a route for swagger is defined.
