@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [General guidelines](general-guidelines.md)
+* [Authentication](authentication.md)
 * [Request](url-structure.md)
 * [HTTP Methods](http-methods.md)
 * [API Endpoint](api-endpoint.md)
@@ -9,5 +10,5 @@
 * [Response](response.md)
 * [Response Formats](response-formats.md)
 * [Response Codes](response-codes.md)
-* [Documentation](documentation.md)
+* Documentation
 
