@@ -6,6 +6,7 @@ In a nutshell:
 
 * APIs' functionalities is kept as simple as possible. The endpoints do only one thing, but they do it well.
 * No overlapping functionalities between different APIs should be implemented.
+* In error case the API response contains verbose description, too, and if possible, a description about erroneously filled parameter value is included in.
 * Each API \(or bundle of APIs\) generate own swagger document about it's functionality.
 
 
