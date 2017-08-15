@@ -10,5 +10,5 @@
 * [Response](response.md)
 * [Response Formats](response-formats.md)
 * [Response Codes](response-codes.md)
-* Documentation
+* [Documentation](documentation.md)
 

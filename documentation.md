@@ -13,15 +13,15 @@ At the moment there are following APIs implemented.
 
 **Catalog API** contains API management functionality.
 
-* swagger object definition: /rest\_apis/catalog.js
+* swagger object definition: /packages/rest\_apis/catalog.js
 
-* functionality and swagger metadata: /apis/server/api.js
+* functionality and swagger metadata: /packages/apis/server/api.js
 
 **Management API** contains Organization and Users management functionality.
 
-* swagger object definition: /rest\_apis/management.js
+* swagger object definition: /packages/rest\_apis/management.js
 
-* functionality and swagger metadata for organizations: /organizations/server/api.js
+* functionality and swagger metadata for organizations: /packages/organizations/server/api.js
 
 * functionality and swagger metadata for users: /users/collection/server/api.js
 
