@@ -1,8 +1,15 @@
 ### Response formats
 
+#### Successful responses
 
+When successful response \(HTTP response codes 2xx\) is returned, the message contains the HTTP response code and the body of response message contains parameters:
 
+* title, describing operation outcom. 
+  * E.g. text `Organization added successfully`
+* data, containing data of one or more entities being object of operation. 
+  * E.g. newly added Organization data
 
+Details of returned data depend on operation and they are described in API related swagger documentation.
 
 #### Error handling
 
