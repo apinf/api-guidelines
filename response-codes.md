@@ -18,6 +18,12 @@ DELETE can be a good example of this.
 
 The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` and in return we do not need any data in the response body of the API, as we explicitly asked the system to delete. If there is any error, like if manager `:managerId`does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
 
+
+
+_TBD: Is 204 a good response code for DELETE?_
+
+
+
 ### 3xx \(Redirection Category\)
 
 **304 Not Modified** indicates that the client has the response already in its cache. And hence there is no need to transfer the same data again.
@@ -33,6 +39,12 @@ These status codes represent that the client has raised a faulty request.
 **403 Forbidden** indicates that the request is valid and the client is authenticated, but the client is not allowed access the page or resource for any reason. E.g sometimes the authorized client is not allowed to access the directory on the server.
 
 **404 Not Found** indicates that the requested resource is not available now.
+
+
+
+_TBD: Is 404 good response code for DELETE, when resource is already deleted?_
+
+
 
 **410 Gone** indicates that the requested resource is no longer available which has been intentionally moved.
 
