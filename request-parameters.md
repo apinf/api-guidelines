@@ -35,7 +35,7 @@ In case the dataset is large, the query parameters can be used in pagination. Th
 
 In next example fifteen first documents are skipped and then next five documents are returned as response.
 
-`GET /users?q=apinf&skip=15&limit=5`
+`GET /users?skip=15&limit=5`
 
 ##### Date and Time formatting
 
