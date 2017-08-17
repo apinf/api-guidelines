@@ -4,9 +4,7 @@ Authentication is implemented according to functionality in [Restivus Swagger](h
 
 Each API documentation needs to have also login endpoint included, so that user is able to log in and explore the API functionality with Swagger document.
 
-In endpoints, which do not need authentication, API key is needed.
-
-
+In endpoints, which do not need authentication - GET methods on top level - an API key is needed.
 
 _TBD:_
 
@@ -16,5 +14,5 @@ _Originally Jarkko says: _
 
 _At the moment user can log in and get tokens: userId and auth-token.  _
 
-_Are these the same or is something else needed?_
+
 
