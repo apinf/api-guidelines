@@ -1,4 +1,4 @@
-### API Endpoint
+# API Endpoint
 
 The resource is always a noun in plural in the API endpoint and if we want to access one instance of the resource, we pass the id in the URL.
 

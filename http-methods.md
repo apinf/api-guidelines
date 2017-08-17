@@ -1,4 +1,4 @@
-### HTTP methods \(verbs\)
+# HTTP methods \(verbs\)
 
 * GET method requests data from the resource and should not produce any side effect.
 

@@ -1,6 +1,6 @@
-### Response formats
+# Response formats
 
-#### Successful responses
+## Successful responses
 
 When successful response \(HTTP response codes 2xx\) is returned, the message contains the HTTP response code and the body of response message contains parameters:
 
@@ -11,7 +11,7 @@ When successful response \(HTTP response codes 2xx\) is returned, the message co
 
 Details of returned data depend on operation and they are described in API related swagger documentation.
 
-#### Error handling
+## Error handling
 
 Just like an HTML error page shows a useful error message to a visitor, an API should provide a useful error message in a known consumable format. The representation of an error should be no different than the representation of any resource, just with its own set of fields.
 
