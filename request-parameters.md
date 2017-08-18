@@ -6,7 +6,7 @@ There are three ways to give parameters in request.
 * as query parameters
 * in body
 
-All parameters, they types and the way they are used must be described in generated documentation.
+All parameters, their types and the way they are used must be described in generated documentation.
 
 ## Parameters as part of URL
 
@@ -18,15 +18,13 @@ One or several parameters can be provided as part of URL.
 
 ## Parameters as query parameters
 
-When using GET method, one or more query parameters can be appended in URL.   
+When using GET method, one or more query parameters can be appended in URL.  
 The parameters can be used when filtering dataset. As a convention in APInf the query condition parameter is named as `q`.
 
 * `GET /users?q=apinf`
   * In example there are queried Users, who's document in database contains string `apinf` 
 
 It depends on implementation, in which fields in database the actual filtering is performed. In APInf case as a response to the example query are returned Users, who's document in database contains string `apinf` in field username  or in field company name or in field email address.
-
-
 
 ### Pagination
 
@@ -38,8 +36,6 @@ In case the dataset, and expected response list, is large, the query parameters 
 In next example fifteen first found documents are skipped and then next five documents are returned as response.
 
 `GET /users?skip=15&limit=5`
-
-
 
 ### Date and Time formatting
 
