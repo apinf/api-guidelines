@@ -8,12 +8,13 @@ When successful response \(HTTP response codes 2xx\) is returned, the message co
   * E.g. text `Organization added successfully`
 * **data**, containing data of one or more entities being object of operation. 
   * E.g. newly added Organization data
+  * it is decided case by case, which fields of document\(s\) returned from collection are included in the response message. 
 
 Details of returned data depend on operation.
 
 ## Error handling
 
-Just like an HTML error page shows a useful error message to a visitor, an API should provide a useful error message in a known consumable format. The representation of an error should be no different than the representation of any resource, just with its own set of fields.
+Similarily as an HTML error page shows a useful error message to a visitor, an API provides a useful error message in a known consumable format. The representation of an error should be no different than the representation of any resource, just with its own set of fields.
 
 The API should always return sensible HTTP status codes. API errors typically break down into 2 types: 400 series status codes for client issues & 500 series status codes for server issues. At a minimum, the API should standardize that all 400 series errors come with consumable JSON error representation. If possible \(i.e. if load balancers & reverse proxies can create custom error bodies\), this should extend to 500 series status codes.
 
