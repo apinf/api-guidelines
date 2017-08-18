@@ -1,6 +1,7 @@
 # Response codes
 
-When the client raises a request to the server through an API, the client should know the feedback, whether it failed, passed or the request was wrong. HTTP status codes are bunch of standardized codes which has various explanations in various scenarios. The server should always return the right status code.
+When the client raises a request to the server through an API, the client must know from the feedback, whether request succeeded or failed, or the request was wrong.   
+HTTP status codes are bunch of standardized codes which has various explanations in various scenarios. The server should always return the right status code.
 
 The following are the important categorization of HTTP codes:
 

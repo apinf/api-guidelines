@@ -14,7 +14,15 @@ Details of returned data depend on operation.
 
 ## Error handling
 
-Similarily as an HTML error page shows a useful error message to a visitor, an API provides a useful error message in a known consumable format. The response message in error case contains similar structure as response message in successful case, only the set of fields is different.
+Similarily as an HTML error page shows a useful error message to a visitor, an API provides a useful error message in a known consumable format. API must not return an uncontrolled error response.
+
+> Note! However, the situation when an :id is missing from middle of the URL, is hard to catch.  
+> E.g. in case  
+> `POST /organizations/:id/managers/:managerId` is erroneously given in form  
+> `POST /organizations//managers/:managerId`  
+> When the Restivus is trying to analyse the path to endpoint, the missign `:id` causes   the parts in URL path to shift. Instead of `:id` the string 'managers' is tried to be analysed and instead the string 'managers' the `:managerId,` , which causes Restivus to lose the path.
+
+The response message in error case contains similar structure as response message in successful case, only the set of fields is different.
 
 The API returns always sensible HTTP status codes.  
 In majority of API error cases following types are used:
@@ -22,7 +30,7 @@ In majority of API error cases following types are used:
 * 400 series status codes for client issues 
 * 500 series status codes for server issues. 
 
-Each API standardizes all 400 series errors to come with consumable JSON error representation. If possible \(i.e. if load balancers & reverse proxies can create custom error bodies\), this can be extend to 500 series status codes.
+Each API standardizes all 400 series errors to come with consumable JSON error representation. If possible \(i.e. if load balancers & reverse proxies can create custom error bodies\), this can be extended to 500 series status codes.
 
 A JSON error body provides a few things for the developer
 
