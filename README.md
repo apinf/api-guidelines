@@ -11,17 +11,12 @@ We consider the developers’ experience to be the most important metric to meas
 
 In this guide the following terms are used related to REST APIs
 
-* **Resource: **an object or representation of something, which has some associated data with it and there can be set of methods to operate on it.  
-  E.g.
-
-  * apis, organizations and users are **resources**
-
-* **Operation**: method or set of methods to operate resources
+* **Resource** is an object or representation of something, which has some associated data with it and there can be set of methods to operate on it.
+  * E.g. apis, organizations and users are **resources**
+* **Operation** is a method or set of methods to operate resources
   * list, delete, add, update are the **operations **to be performed on resources
-
-* **URL **\(Uniform **Resource **Locator\) is a path through which a **resource **can be located and some actions can be performed on it.
-
-
+* **URL** \(Uniform **Resource **Locator\) is a path through which a **resource** can be located and some actions can be performed on it.
+* **Collection** is a set of resources.
 
 
 
