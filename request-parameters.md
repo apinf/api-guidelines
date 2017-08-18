@@ -6,8 +6,6 @@ There are three ways to give parameters in request.
 * as query parameters
 * in body
 
-All parameters, their types and the way they are used must be described in generated documentation.
-
 ## Parameters as part of URL
 
 One or several parameters can be provided as part of URL.
@@ -44,4 +42,10 @@ Dates and times are returned in ISODate format, e.g. 2012-07-14T01:00:00+01:00.
 ## Parameters in body
 
 In case methods POST or PUT is used, the necessary parameters are included in request body as type JSON. Because the parameters usually refer to fields in database, the APInf convention for parameter naming is to use camelCase in order to maintain consistency.
+
+## Documentation of request parameters
+
+All parameters, their types and the way they are used must be described in generated documentation endpoint by endpoint.
+
+
 
