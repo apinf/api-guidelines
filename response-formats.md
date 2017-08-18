@@ -4,12 +4,12 @@
 
 When successful response \(HTTP response codes 2xx\) is returned, the message contains the HTTP response code and the body of response message contains parameters:
 
-* title, describing operation outcom. 
+* **title**, describing operation outcome. 
   * E.g. text `Organization added successfully`
-* data, containing data of one or more entities being object of operation. 
+* **data**, containing data of one or more entities being object of operation. 
   * E.g. newly added Organization data
 
-Details of returned data depend on operation and they are described in API related swagger documentation.
+Details of returned data depend on operation.
 
 ## Error handling
 
@@ -47,5 +47,7 @@ Validation errors for PUT, PATCH and POST requests will need a field breakdown. 
 }
 ```
 
+## Documentation of Response formats
 
+Details of returned data must be described in must be described in generated documentation.
 
