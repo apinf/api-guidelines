@@ -23,7 +23,6 @@ For developer point of view the APInf APIs consist of two or more files.
     * tags
     * params
     * definition
-    * 
   * route for swagger document generation is defined.
 * In **functionality and swagger metadata files**
   * the actual functionality is implemented 
@@ -35,11 +34,11 @@ At the moment there are following APIs implemented.
 
 **Catalog API** contains API management functionality.
 
-* swagger object definition 
+* swagger object definition
 
   * /packages/rest\_apis/catalog.js
 
-* functionality and swagger metadata 
+* functionality and swagger metadata
 
   * /packages/apis/server/api.js
 
