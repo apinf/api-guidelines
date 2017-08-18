@@ -1,6 +1,6 @@
 # Response codes
 
-When the client raises a request to the server through an API, the client must know from the feedback, whether request succeeded or failed, or the request was wrong.   
+When the client raises a request to the server through an API, the client must know from the feedback, whether request succeeded or failed, or the request was wrong.  
 HTTP status codes are bunch of standardized codes which has various explanations in various scenarios. The server should always return the right status code.
 
 The following are the important categorization of HTTP codes:
@@ -19,7 +19,7 @@ DELETE can be a good example of this.
 
 The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` and in return we do not need any data in the response body of the API, as we explicitly asked the system to delete. If there is any error, like if manager `:managerId`does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
 
-_TBD: Is 204 a good response code for DELETE?_
+// _TBD: Is 204 a good response code for DELETE?_
 
 ## 3xx \(Redirection Category\)
 
@@ -37,7 +37,7 @@ These status codes represent that the client has raised a faulty request.
 
 **404 Not Found** indicates that the requested resource is not available now.
 
-_TBD: Is 404 good response code for DELETE, when resource is already deleted?_
+// _TBD: Is 404 good response code for DELETE, when resource is already deleted?_
 
 **410 Gone** indicates that the requested resource is no longer available which has been intentionally moved.
 

@@ -12,6 +12,21 @@ When successful response \(HTTP response codes 2xx\) is returned, the message co
 
 Details of returned data depend on operation.
 
+## Checkings to be done
+
+When handing any request, API must check
+
+* does User requesting an operation have an account
+* does the targeted resource exist
+* is user priviledged to operation in question
+* are all required parameters provided in request
+
+In case any of checkings fail, operation is stopped and an appropriate error response is sent. 
+
+In case checkings succeed, the functionality continues. When resources are handled the API functionality must be planned such a way, that in successful case all requested resources are updated and in failure case none of the requested resources are updated. No partial updates. 
+
+Keep API purpose and functionality as simple as possible. Do not try to overload API functionality.
+
 ## Error handling
 
 Similarily as an HTML error page shows a useful error message to a visitor, an API provides a useful error message in a known consumable format. API must not return an uncontrolled error response.
@@ -35,7 +50,7 @@ Each API standardizes all 400 series errors to come with consumable JSON error r
 A JSON error body provides a few things for the developer
 
 * a useful error message
-* a unique error code \(that can be looked up for more details in the docs\)   _//  &lt;-- Will we have this?_
+* a unique error code \(that can be looked up for more details in the docs\)   _//  &lt;-- TBD  Will we have this?_
 * a detailed description. 
 
 JSON output representation looks like this:
@@ -48,7 +63,7 @@ JSON output representation looks like this:
 }
 ```
 
-With validation errors for PUT, PATCH and POST requests will need a field breakdown. This can be modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:  _// &lt;-- is this too detailed?_
+With validation errors for PUT, PATCH and POST requests will need a field breakdown. This can be modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:  _// &lt;-- TBD is this too detailed?_
 
 ```
 {
