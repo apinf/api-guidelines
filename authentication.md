@@ -2,7 +2,7 @@
 
 Authentication is implemented according to functionality in [Restivus Swagger](https://github.com/apinf/restivus-swagger).
 
-Each API documentation needs to have also login endpoint included, so that user is able to log in and explore the API functionality with Swagger document.
+Include in each API documentation also login endpoint. This way user is able to log in and explore the API functionality with Swagger document.
 
 _TBD:_
 
