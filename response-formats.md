@@ -14,9 +14,15 @@ Details of returned data depend on operation.
 
 ## Error handling
 
-Similarily as an HTML error page shows a useful error message to a visitor, an API provides a useful error message in a known consumable format. The representation of an error should be no different than the representation of any resource, just with its own set of fields.
+Similarily as an HTML error page shows a useful error message to a visitor, an API provides a useful error message in a known consumable format. The response message in error case contains similar structure as response message in successful case, only the set of fields is different.
 
-The API should always return sensible HTTP status codes. API errors typically break down into 2 types: 400 series status codes for client issues & 500 series status codes for server issues. At a minimum, the API should standardize that all 400 series errors come with consumable JSON error representation. If possible \(i.e. if load balancers & reverse proxies can create custom error bodies\), this should extend to 500 series status codes.
+The API returns always sensible HTTP status codes.   
+In majority of API error cases following types are used: 
+
+* 400 series status codes for client issues 
+* 500 series status codes for server issues. 
+
+At a minimum, the API should standardize that all 400 series errors come with consumable JSON error representation. If possible \(i.e. if load balancers & reverse proxies can create custom error bodies\), this should extend to 500 series status codes.
 
 A JSON error body should provide a few things for the developer - a useful error message, a unique error code \(that can be looked up for more details in the docs\) and possibly a detailed description. JSON output representation for something like this would look like:
 
