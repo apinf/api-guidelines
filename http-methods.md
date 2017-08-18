@@ -1,15 +1,15 @@
 # HTTP methods \(verbs\)
 
 * GET method requests data from the resource and should not produce any side effect.
-
-  E.g `/users` returns list of all users
+  * E.g `GET /users`****
+    * returns list of all users
 
 * POST method requests the server to create a resource in the database.
-
-  E.g `/organizations/:id/managers` creates a new Manager of Organization identified with :id.
+  * E.g `POST /organizations/:id/managers`
+    * creates a new Manager of Organization identified with :id.
 
   * POST is non-idempotent which means multiple requests will have different effects.
-    E.g. When requested with same parameters: at first time new Manager is created, at second time an error response \(manager already exists\) is gotten.
+    * E.g. When requested with same parameters: at first time new Manager is created, at second time an error response \(manager already exists\) is gotten.
 
 * PUT method requests the server to update resource.  
   In our APIs it is not possible to create a resource with PUT method, because resources are referenced with :id. In case resource with :id does not exist, a response with `404 Resource not found` is sent.

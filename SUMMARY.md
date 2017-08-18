@@ -11,8 +11,8 @@
 ## Request
 
 * [Request](url-structure.md)
-* [Request Parameters](request-parameters.md)
 * [HTTP Methods](http-methods.md)
+* [Request Parameters](request-parameters.md)
 * [API Endpoint](api-endpoint.md)
 
 ## Response
