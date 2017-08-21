@@ -4,7 +4,7 @@ When the client sends a request to the server through an API, the client must kn
 
 HTTP status codes are bunch of standardized codes which has various explanations in various scenarios. The server should always return the right status code.
 
-The following are the important categorization of HTTP codes:
+Here are the most important HTTP codes categorized. When needed, new codes can be added. 
 
 ## 2xx \(Success category\)
 
