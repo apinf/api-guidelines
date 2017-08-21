@@ -4,10 +4,15 @@
 
 The APInf convention in API documentation is following:
 
-* Each \(for User point of view\) API generates own swagger document about it's functionality.
+* Each \(for User point of view\) API must generate own swagger document about it's functionality.
 * Swagger document generation relies on Restivus Swagger plugin \([https://github.com/apinf/restivus-swagger\](https://github.com/apinf/restivus-swagger%29\).
 * Documentation is written in Restivus Swagger documentation description fields.
 * Note! When writing multiline documentation with markdown, use backticks \(\`\`\) instead of single quotes \(''\) as documentation field separators.
+* When adding a functionality in API, check also if generated documentation needs update
+  * changes in new or updated parameters
+  * changes in descriptions of request or response messages
+  * changes in endpoint documentation
+  * changes in API top level documentation
 
 ## Files
 
