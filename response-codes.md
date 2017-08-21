@@ -1,6 +1,7 @@
 # Response codes
 
-When the client raises a request to the server through an API, the client must know from the feedback, whether request succeeded or failed, or the request was wrong.  
+When the client sends a request to the server through an API, the client must know from the feedback the outcome of the request, whether it succeeded or failed, in which also the reason of failure is specified.
+
 HTTP status codes are bunch of standardized codes which has various explanations in various scenarios. The server should always return the right status code.
 
 The following are the important categorization of HTTP codes:
@@ -9,9 +10,9 @@ The following are the important categorization of HTTP codes:
 
 These status codes represent that the requested action was received and successfully processed by the server.
 
-**200 Ok** The standard HTTP response representing success for GET, PUT and POST.
+**200 OK** The standard HTTP response representing success for GET, PUT and POST.
 
-**201 Created** This status code should be returned whenever the new instance is created. E.g on creating a new instance, using POST method, should always return 201 status code.
+**201 Created** This status code is returned whenever the new instance is created with POST method.
 
 **204 No Content** represents the request is successfully processed, but has not returned any content.
 
@@ -29,15 +30,15 @@ The API `DELETE /organizations/:id/managers/:managerId` will delete the manager 
 
 These status codes represent that the client has raised a faulty request.
 
-**400 Bad Request** indicates that the request by the client was not processed, as the server could not understand what the client is asking for.
+**400 Bad Request** indicates that the request by the client was not processed, as the server could not understand what the client is asking for, e.g. because of missing parameter.
 
 **401 Unauthorized** indicates that the client is not allowed to access resources, and should re-request with the required credentials.
 
-**403 Forbidden** indicates that the request is valid and the client is authenticated, but the client is not allowed access the page or resource for any reason. E.g sometimes the authorized client is not allowed to access the directory on the server.
+**403 Forbidden** indicates that the request is valid and the client is authenticated, but the client is not allowed access the page or resource for some reason. E.g authorized client is not an Admin, neither a Manager in Organization in question.
 
-**404 Not Found** indicates that the requested resource is not available now.
+**404 Not Found** indicates that the requested resource is not available at the time of request.
 
-// _TBD: Is 404 good response code for DELETE, when resource is already deleted?_
+// _TBD: Is 404 good response code for DELETE, when resource to be removed was not found?_
 
 **410 Gone** indicates that the requested resource is no longer available which has been intentionally moved.
 
