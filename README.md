@@ -7,6 +7,8 @@ The APInf REST APIs are the interface, through which developers interact with th
 
 We consider the developers’ experience to be the most important metric to measure the quality of the our APIs.
 
+
+
 ## Terminology
 
 In this guide the following terms are used related to REST APIs
