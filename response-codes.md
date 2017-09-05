@@ -1,18 +1,24 @@
 # Response codes
 
-When the client sends a request to the server through an API, the client must know from the feedback the outcome of the request, whether it succeeded or failed, in which also the reason of failure is specified.
+When the client sends a request to the server through an API, the client must know from the feedback the outcome of the request, whether it succeeded or failed. The reason of failure must also be specified.
 
-HTTP status codes are bunch of standardized codes which has various explanations in various scenarios. The server should always return the right status code.
+käytä aina näitä ja miksi...
 
-Here are the most important HTTP codes categorized. When needed, new codes can be added. 
+The server should always return the right status code.
+
+APINf API uses the following HTTP codes in responses.
 
 ## 2xx \(Success category\)
 
-These status codes represent that the requested action was received and successfully processed by the server.
+The requested action was received and successfully processed by the server.
 
-**200 OK** The standard HTTP response representing success for GET, PUT and POST.
+taulukko...
 
-**201 Created** This status code is returned whenever the new instance is created with POST method.
+
+
+Return **200 OK** in successful response for GET, PUT and POST.
+
+Return **201 Created** This status code is returned whenever the new instance is created with POST method.
 
 **204 No Content** represents the request is successfully processed, but has not returned any content.
 
@@ -24,9 +30,13 @@ The API `DELETE /organizations/:id/managers/:managerId` will delete the manager 
 
 ## 3xx \(Redirection Category\)
 
+taulukko,,,
+
 **304 Not Modified** indicates that the client has the response already in its cache. And hence there is no need to transfer the same data again.
 
 ## 4xx \(Client Error Category\)
+
+taulukko...
 
 These status codes represent that the client has raised a faulty request.
 
@@ -43,6 +53,8 @@ These status codes represent that the client has raised a faulty request.
 **410 Gone** indicates that the requested resource is no longer available which has been intentionally moved.
 
 ## 5xx \(Server Error Category\)
+
+tarvitaanko täällä?
 
 **500 Internal Server Error** indicates that the request is valid, but the server is totally confused and the server is asked to serve some unexpected condition.
 
