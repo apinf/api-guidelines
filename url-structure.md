@@ -4,7 +4,7 @@
 
 The URL is a sentence, where HTTP methods \(GET, POST, DELETE, PUT\) are **verbs **and resources are **nouns**.
 
-Examples: Creating a new Manager
+Example: Creating a new Manager into an Organization
 
 Use this
 
