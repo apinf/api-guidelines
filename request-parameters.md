@@ -29,6 +29,10 @@ The parameters can be used e.g. for filtering dataset or to support pagination.
 
 As a convention in APInf the query condition parameter is named as `q`.
 
+
+
+--------------------------------- 2017-09-05
+
 It depends on implementation, in which fields in database the actual filtering is performed. In APInf case as a response to the example query are returned Users, who's document in database contains string `apinf` in field username  or in field company name or in field email address.
 
 ### Pagination
