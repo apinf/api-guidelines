@@ -10,18 +10,14 @@ In a nutshell:
 * Avoid overlapping functionalities between different APIs.
 * In error case include in the API response verbose description. 
   * include also a description about erroneous parameter value, if it is feasible.
-* Implement in each API \(or bundle of APIs\) generation of its own swagger document about it's functionality.
-
-
+* Implement in each API \(or bundle of APIs\) ability to generate of its own swagger document about it's functionality.
 
 Minimum developer experience
 
-* jokainen tuot. API on katalogissa, liitetty proc¨xyyn ja vaatii api keyn käytön kutsussa...
-* Jokaisella apilla on swag / open api specification...
-* kuvaus kunnossa
-* oma logo
-
-
+* Each API in production must be in Catalog, connected in proxy and API key must be used in call.
+* Each API must have documentation, either a swagger file or open API specification.
+* The description of API must be sufficient.
+* API must have own logo
 
 
 
