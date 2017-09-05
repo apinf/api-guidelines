@@ -17,7 +17,7 @@ Minimum developer experience
 * Each API in production must be in Catalog, connected in proxy and API key must be used in call.
 * Each API must have documentation, either a swagger file or open API specification.
 * The description of API must be sufficient.
-* API must have own logo
+* Each API must have own logo
 
 
 
