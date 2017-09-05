@@ -2,9 +2,14 @@
 
 ## Conventions
 
+There are two alternatives to create APIs: design first and code first. For practical reasons,** we use code first approach**.
+
 The APInf convention in API documentation is following:
 
 * Each \(for User point of view\) API must generate own swagger document about it's functionality.
+  * must contain...
+  * typical use cases...
+  * simple examples of calling Api and responses...
 * Swagger document generation relies on Restivus Swagger plugin \([https://github.com/apinf/restivus-swagger\](https://github.com/apinf/restivus-swagger%29\).
 * Documentation is written in Restivus Swagger documentation description fields.
 * Note! When writing multiline documentation with markdown, use backticks \(\`\`\) instead of single quotes \(''\) as documentation field separators.
@@ -29,15 +34,15 @@ For developer point of view the APInf APIs consist of two or more files.
     * params
     * definition
   * route for swagger document generation is defined.
-* In **functionality and swagger metadata files**
+* **functionality and swagger metadata file**
   * the actual functionality is implemented 
   * the swagger metadata is defined for **each endpoint** in swagger attribute.
 
 ## Current APIs
 
-At the moment there are following APIs implemented.
+At the moment the following APIs have been implemented.
 
-**Catalog API** contains API management functionality.
+**APinf Catalog API** contains API management functionality.
 
 * swagger object definition
 
@@ -51,7 +56,7 @@ At the moment there are following APIs implemented.
 
   * &lt;path&gt;/catalog.json
 
-**Management API** contains Organization and Users management functionality.
+**APInf Management API** contains Organization and Users management functionality.
 
 * swagger object definition
 

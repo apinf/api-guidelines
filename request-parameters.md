@@ -4,7 +4,7 @@ There are three ways to give parameters in request.
 
 * as part of URL
 * as query parameters
-* in body
+* in body \(payload\)
 
 ## Parameters as part of URL
 
@@ -16,11 +16,13 @@ One or several parameters can be provided as part of URL.
 
 ## Parameters as query parameters
 
-When using GET method, one or more query parameters can be appended in URL.  
-The parameters can be used when filtering dataset. As a convention in APInf the query condition parameter is named as `q`.
+When using GET method, one or more query parameters can be appended to the URL. Parameters are added by using `? `and separated with `& `. The parameter has always a key and a value.  
+The parameters can be used for filtering dataset. 
 
-* `GET /users?q=apinf`
+* `GET /users?q=apinf&limit=10`
   * In example there are queried Users, who's document in database contains string `apinf` 
+
+selitystä esimerkistä thän...  As a convention in APInf the query condition parameter is named as `q`.
 
 It depends on implementation, in which fields in database the actual filtering is performed. In APInf case as a response to the example query are returned Users, who's document in database contains string `apinf` in field username  or in field company name or in field email address.
 
@@ -37,15 +39,13 @@ In next example fifteen first found documents are skipped and then next five doc
 
 ### Date and Time formatting
 
-Dates and times are returned in ISODate format, e.g. 2012-07-14T01:00:00+01:00.
+Dates and times must be provided and returned in ISODate format \(linkki standardiin...\), e.g. 2012-07-14T01:00:00+01:00 or lyhyempi formaatti myös mukaan...
 
-## Parameters in body
+## Payload in body
 
-In case methods POST or PUT is used, the necessary parameters are included in request body as type JSON. Because the parameters usually refer to fields in database, the APInf convention for parameter naming is to use camelCase in order to maintain consistency.
+In case methods POST or PUT is used, the required payload is included in request body as type JSON. Because the parameters usually refer to fields in database, the APInf convention for parameter naming is to use camelCase in order to maintain consistency.
 
 ## Documentation of request parameters
 
 All parameters, their types and the way they are used must be described in generated documentation endpoint by endpoint.
-
-
 
