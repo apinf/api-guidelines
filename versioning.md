@@ -1,8 +1,16 @@
 # Versioning
 
-When APIs are upgraded with some breaking change, it may lead to breaking existing products or services using upgraded APIs.
+When APIs are upgraded with a breaking change, it may lead to breaking existing products or services using upgraded APIs.
 
-Breaking changes are for example ...
+Examples of breaking changes:
+
+* renaming fields or resource paths or endpoints
+* changing field type \(e.g. from string to a list of strings\)
+* changing structure of payload \(removing/renaming/retyping fields\)
+* altering HTTP verbs
+* changing response HTTP codes 
+
+
 
 In case of breaking changes making a new version of the updated API is mandatory.
 
