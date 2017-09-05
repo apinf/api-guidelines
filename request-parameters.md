@@ -1,6 +1,6 @@
 # Request parameters
 
-There are three ways to give parameters in request.
+There are three ways to provide parameters in request.
 
 * as part of URL
 * as query parameters
@@ -12,17 +12,22 @@ One or several parameters can be provided as part of URL.
 
 * `GET /organizations/:id/managers/:managerId`
 
-  * In example there are provided two parameters. Parameter `:id` refers to Organization ID. Parameter `:managerId` refers to Manager ID. As a response is returned the Manager by managerId in the Organization by :id \(if both are found\).
+  * In example there are provided two parameters. 
+    * Parameter `:id` refers to Organization ID. 
+    * Parameter `:managerId` refers to Manager ID. 
+  * As a response is returned the Manager by managerId in the Organization by :id \(if both are found\).
 
 ## Parameters as query parameters
 
-When using GET method, one or more query parameters can be appended to the URL. Parameters are added by using `? `and separated with `& `. The parameter has always a key and a value.  
-The parameters can be used for filtering dataset. 
+When using GET method, one or more query parameters can be appended to the URL. Parameters are added by using `?`and separated with `&`. The parameter has always a key and a value.
+
+The parameters can be used e.g. for filtering dataset or to support pagination.
 
 * `GET /users?q=apinf&limit=10`
   * In example there are queried Users, who's document in database contains string `apinf` 
+  * in case such a documents are found, only first 10 documents are returned
 
-selitystä esimerkistä thän...  As a convention in APInf the query condition parameter is named as `q`.
+As a convention in APInf the query condition parameter is named as `q`.
 
 It depends on implementation, in which fields in database the actual filtering is performed. In APInf case as a response to the example query are returned Users, who's document in database contains string `apinf` in field username  or in field company name or in field email address.
 
