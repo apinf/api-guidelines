@@ -46,8 +46,8 @@ At the moment the following APIs have been implemented.
 
 **APinf Catalog API** contains API functionality of adding, modifying and deleting.
 
-* swagger object definition
-  *  /packages/rest\_apis/catalog.js
+* swagger object definition 
+  * /packages/rest\_apis/catalog.js
 * functionality and swagger metadata 
   * /packages/apis/server/api.js
 * link to created JSON file for swagger document 
@@ -56,19 +56,14 @@ At the moment the following APIs have been implemented.
 **APInf Management API** contains Organization and Users management functionality.
 
 * swagger object definition
-
   * /packages/rest\_apis/management.js
-
-* functionality and swagger metadata 
-
+* functionality and swagger metadata
   * for organizations
-
 * /packages/organizations/server/api.js 
   * for users
 * /users/collection/server/api.js 
-  * link to created JSON file for swagger documen
-
-* &lt;path&gt;/management.json
+  * link to created JSON file for swagger document
+* /management.json
 
 
 
