@@ -4,7 +4,7 @@ When the client sends a request to the server through an API, the client must kn
 
 käytä aina näitä ja miksi...
 
-The server should always return the right status code.
+The server must always return the right status code.
 
 APINf API uses the following HTTP codes in responses.
 
@@ -12,9 +12,11 @@ APINf API uses the following HTTP codes in responses.
 
 The requested action was received and successfully processed by the server.
 
-taulukko...
-
-
+| HTTP code | Outcome | Description |
+| :--- | :--- | :--------- |
+| 200 | OK | Successful response for GET, PUT and POST |
+| 201 | Created | A new resource instance was successfully created with POST method |
+| 204 | No content | Request is successfully processed, but has not returned any content |
 
 Return **200 OK** in successful response for GET, PUT and POST.
 
