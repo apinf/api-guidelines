@@ -29,11 +29,11 @@ The parameters can be used e.g. for filtering dataset or to support pagination.
 
 As a convention in APInf the query condition parameter is named as `q`.
 
+It depends on implementation, in which fields in database the actual filtering is performed. In APInf case as a response to the example query there are returned Users, who's document in database contains string `apinf` at least in one of the following fields:
 
-
---------------------------------- 2017-09-05
-
-It depends on implementation, in which fields in database the actual filtering is performed. In APInf case as a response to the example query are returned Users, who's document in database contains string `apinf` in field username  or in field company name or in field email address.
+* username
+* company name
+* email address.
 
 ### Pagination
 
@@ -48,7 +48,10 @@ In next example fifteen first found documents are skipped and then next five doc
 
 ### Date and Time formatting
 
-Dates and times must be provided and returned in ISODate format \(linkki standardiin...\), e.g. 2012-07-14T01:00:00+01:00 or lyhyempi formaatti myös mukaan...
+Dates and times must be provided and returned in ISODate format \(https://www.iso.org/iso-8601-date-and-time-format.html\),
+
+* either in Combined date and time in UTC format, e.g. 2012-07-14T01:00:00+01:00 
+* or in Date format, e.g. 2012-07-14.
 
 ## Payload in body
 
