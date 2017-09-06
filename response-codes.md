@@ -12,53 +12,48 @@ APINf API uses the following HTTP codes in responses.
 
 The requested action was received and successfully processed by the server.
 
-| HTTP code | Outcome | Description |
-| :--- | :--- | :--------- |
-| 200 | OK | Successful response for GET, PUT and POST |
-| 201 | Created | A new resource instance was successfully created with POST method |
-| 204 | No content | Request is successfully processed, but has not returned any content |
+* **200 OK** 
+  * successful response for GET, PUT and POST.
+* **201 Created** 
+  * a new resource instance was successfully created with POST method.
+* **204 No Content** 
+  * the request was successfully processed, but no content was returned.
+    * DELETE can be a good example of this. 
+      The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` .   
+      In response we do not need any data in the returned, as we explicitly asked the system to delete the resource instance. 
 
-Return **200 OK** in successful response for GET, PUT and POST.
-
-Return **201 Created** This status code is returned whenever the new instance is created with POST method.
-
-**204 No Content** represents the request is successfully processed, but has not returned any content.
-
-DELETE can be a good example of this.
-
-The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` and in return we do not need any data in the response body of the API, as we explicitly asked the system to delete. If there is any error, like if manager `:managerId`does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
-
-// _TBD: Is 204 a good response code for DELETE?_
+    * In case there were any error, like if manager `:managerId`does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
 
 ## 3xx \(Redirection Category\)
 
-taulukko,,,
+Used rarely.
 
-**304 Not Modified** indicates that the client has the response already in its cache. And hence there is no need to transfer the same data again.
+* **304 Not Modified** 
+  * indicates that the client has the response already in its cache. And hence there is no need to transfer the same data again.
 
 ## 4xx \(Client Error Category\)
 
-taulukko...
-
 These status codes represent that the client has raised a faulty request.
 
-**400 Bad Request** indicates that the request by the client was not processed, as the server could not understand what the client is asking for, e.g. because of missing parameter.
+* **400 Bad Request** 
+  * The request was not processed, as the server could not understand what the client is asking for, e.g. because of missing parameter.
+* **401 Unauthorized** 
+  * The client was not allowed to access resources, and should re-request with the required credentials.
+* **403 Forbidden** 
+  * The request was valid and the client is authenticated, but the client is not allowed access the resource for some reason. E.g authorized client is not an Admin, neither a Manager in Organization in question.
+* **404 Not Found** 
+  * The requested resource was not available at the time of request.
 
-**401 Unauthorized** indicates that the client is not allowed to access resources, and should re-request with the required credentials.
 
-**403 Forbidden** indicates that the request is valid and the client is authenticated, but the client is not allowed access the page or resource for some reason. E.g authorized client is not an Admin, neither a Manager in Organization in question.
-
-**404 Not Found** indicates that the requested resource is not available at the time of request.
-
-// _TBD: Is 404 good response code for DELETE, when resource to be removed was not found?_
-
-**410 Gone** indicates that the requested resource is no longer available which has been intentionally moved.
 
 ## 5xx \(Server Error Category\)
 
-tarvitaanko täällä?
+Possible needed in some special case.
 
-**500 Internal Server Error** indicates that the request is valid, but the server is totally confused and the server is asked to serve some unexpected condition.
+* **500 Internal Server Error** 
+  * The request was valid, but the server is totally confused and the server is asked to serve some unexpected condition.
+* **503 Service Unavailable** 
+  * The server is down or unavailable to receive and process the request. Mostly if the server is undergoing maintenance.
 
-**503 Service Unavailable** indicates that the server is down or unavailable to receive and process the request. Mostly if the server is undergoing maintenance.
+
 
