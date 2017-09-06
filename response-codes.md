@@ -16,11 +16,13 @@ The requested action was received and successfully processed by the server.
   * successful response for GET, PUT and POST.
 * **201 Created** 
   * a new resource instance was successfully created with POST method.
-* **204 No Content** 
+* **204 No Content**
+
   * the request was successfully processed, but no content was returned.
-    * DELETE can be a good example of this. 
-      The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` .   
-      In response we do not need any data in the returned, as we explicitly asked the system to delete the resource instance. 
+
+    * DELETE can be a good example of this.   
+      The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` .  
+      In response we do not need any data in the returned, as we explicitly asked the system to delete the resource instance.
 
     * In case there were any error, like if manager `:managerId`does not exist in the database, then the response code would be not be of 2xx Success Category but around 4xx Client Error category.
 
@@ -44,14 +46,12 @@ These status codes represent that the client has raised a faulty request.
 * **404 Not Found** 
   * The requested resource was not available at the time of request.
 
-
-
 ## 5xx \(Server Error Category\)
 
 Possible needed in some special case.
 
 * **500 Internal Server Error** 
-  * The request was valid, but the server is totally confused and the server is asked to serve some unexpected condition.
+  * The request was valid, but the server was unable to serve because of some unexpected condition.
 * **503 Service Unavailable** 
   * The server is down or unavailable to receive and process the request. Mostly if the server is undergoing maintenance.
 
