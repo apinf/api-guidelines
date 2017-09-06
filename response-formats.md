@@ -12,7 +12,31 @@ When successful response \(HTTP response codes 2xx\) is returned, the header con
 
 Details of returned data depends on operation.
 
-Esimerkki JSON-koodina vastauksesta...
+Example: response to `GET /organizations/:id`
+
+```
+     {
+       "_id": "2LSbYwcixbohmwo8Z",
+       "name": "APInf",
+       "url": "https://apinf.com",
+       "description": "Open source API management and catalog",
+       "slug": "apinf",
+       "managerIds": [
+           "peJXS5THJtMssTopq"
+       ],
+       "createdBy": "peJXS5THJtMssTopq",
+       "createdAt": "2017-03-16T19:07:54.575Z",
+       "friendlySlugs": {
+           "slug": {
+               "base": "apinf",
+               "index": 0
+           }
+       },
+       "organizationLogoFileId": "c097697707d71196f2f1ec52",
+       "updatedAt": "2017-07-19T09:23:51.570Z",
+       "featuredApiIds": []
+     },
+```
 
 ## Request validation
 
@@ -26,23 +50,21 @@ When handling any request, API must check whether
 
 In case validation fails, operation is stopped and an appropriate error response is sent. In case validation is passed, the request process continues.
 
-Partial updates are not allowed. Consistency between database objects must be maintained... When resources are handled the API functionality must be planned such a way, that in successful case all requested resources are updated and in failure case none of the requested resources are updated.
+Partial updates are not allowed. Consistency between database objects must be maintained:
+
+* in successful case all requested resources are updated 
+* in failure case none of the requested resources is updated.
 
 Keep API purpose and functionality as simple as possible. Do not try to overload API functionality.
 
 ## Error handling
 
-Provide a useful error message: the header must contain the HTTP response code and the body of response message must contain detailed information in human readable format as JSON.
+Provide a useful error message:
 
-API must not return an uncontrolled error response.
+* the header must contain the HTTP response code 
+* the body of response message must contain detailed information in human readable format as JSON.
 
-> Note! However, the situation when an :id is missing from middle of the URL, is hard to catch.  
-> E.g. in case  
-> `POST /organizations/:id/managers/:managerId` is erroneously given in form  
-> `POST /organizations//managers/:managerId`  
-> When the Restivus is trying to analyse the path to endpoint, the missign `:id` causes   the parts in URL path to shift. Instead of `:id` the string 'managers' is tried to be analysed and instead the string 'managers' the `:managerId,` , which causes Restivus to lose the path.
-
-The API returns always sensible HTTP status codes: 
+API must not return an uncontrolled error response, but the API returns always a sensible response with HTTP status codes:
 
 * 400 series status codes for client issues 
 * 500 series status codes for server issues. 
@@ -52,8 +74,8 @@ Each API standardizes all 400 series errors to come with consumable JSON error r
 A JSON error body provides a few things for the developer
 
 * a useful error message
-* a unique error code \(that can be looked up for more details in the docs\)   _//  &lt;-- TBD  Will we have this?_
-* a detailed description. 
+* a detailed description
+* \(to be decided case by case\) a unique error code, which can be looked up for more details in the docs
 
 JSON output representation looks like this:
 
@@ -65,7 +87,7 @@ JSON output representation looks like this:
 }
 ```
 
-With validation errors for PUT, PATCH and POST requests will need a field breakdown. This can be modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:  _// &lt;-- TBD is this too detailed?_
+\(to be decided case by case\) With validation errors for PUT, PATCH and POST requests will need a field breakdown. This can be modeled by using a fixed top-level error code for validation failures and providing the detailed errors in an additional errors field, like so:  _// &lt;-- TBD is this too detailed?_
 
 ```
 {
@@ -84,6 +106,12 @@ With validation errors for PUT, PATCH and POST requests will need a field breakd
   ]
 }
 ```
+
+> Note! However, the situation when an :id is missing from middle of the URL, is hard to catch.  
+> E.g. in case  
+> `POST /organizations/:id/managers/:managerId` is erroneously provided in form  
+> `POST /organizations//managers/:managerId`  
+> When the Restivus is trying to analyse the path to endpoint, the missign `:id` causes   the parts in URL path to shift. Instead of `:id` the string 'managers' is tried to be analysed and instead the string 'managers' the `:managerId,` , which causes Restivus to lose the path.
 
 ## Documentation of Response formats
 
