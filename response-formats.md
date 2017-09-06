@@ -4,8 +4,8 @@
 
 When successful response \(HTTP response codes 2xx\) is returned, the header contains the HTTP response code and the body of response message contains detailed information in human readable format as JSON:
 
-* **title**, describing operation outcome. 
-  * E.g. text `Organization added successfully`
+* **status**, describing operation outcome. 
+  * E.g. text `success`
 * **data**, containing data of one or more entities being object of operation. 
   * E.g. newly added Organization data
   * it is decided case by case, which fields of document\(s\) returned from collection are included in the response message. 
@@ -57,12 +57,16 @@ Partial updates are not allowed. Consistency between database objects must be ma
 
 Keep API purpose and functionality as simple as possible. Do not try to overload API functionality.
 
-## Error handling
+## Unsuccessful responses \(3xx/4xx/5xx\)
 
 Provide a useful error message:
 
 * the header must contain the HTTP response code 
 * the body of response message must contain detailed information in human readable format as JSON.
+  * **status**, describing operation outcome. 
+    * E.g. text `fail`
+  * **message**, containing description of failure reason
+    * E.g. text `Description length must not exceed 1000 characters`
 
 API must not return an uncontrolled error response, but the API returns always a sensible response with HTTP status codes:
 
@@ -81,9 +85,8 @@ JSON output representation looks like this:
 
 ```
 {
-  "code" : 1234,
-  "title" : "Organization is not found",
-  "detail" : "Organization with specified ID is not found"
+  "status" : "fail",
+  "message" : "Organization with specified ID is not found"
 }
 ```
 
@@ -92,8 +95,8 @@ JSON output representation looks like this:
 ```
 {
   "code" : 1024,
-  "title" : "Validation Failed",
-  "detail" : [
+  "status" : "fail",
+  "message" : [
     {
       "code" : 5432,
       "title" : "first_name",
