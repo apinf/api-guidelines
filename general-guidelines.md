@@ -11,6 +11,7 @@ In a nutshell:
 * In error case include in the API response verbose description. 
   * include also a description about erroneous parameter value, if it is feasible.
 * Implement in each API \(or bundle of APIs\) ability to generate of its own swagger document about it's functionality.
+* API must have support for the OPTIONS endpoint
 
 Minimum developer experience
 
