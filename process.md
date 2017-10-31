@@ -1,8 +1,8 @@
 # API Design process
 
-In APInf we use unified process for Platform API development. 
+In APInf we use unified process for Platform API development.
 
-[PIC HERE]
+\[PIC HERE\]
 
 ## Design first
 
@@ -15,5 +15,6 @@ In APInf we use unified process for Platform API development.
 ## Implement
 
 ## Release
+
 
 

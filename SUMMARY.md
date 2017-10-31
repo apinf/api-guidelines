@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Process](process.md)
 * [General guidelines](general-guidelines.md)
 * [Authentication](authentication.md)
 * [Documentation](documentation.md)
