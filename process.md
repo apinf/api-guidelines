@@ -41,10 +41,10 @@ Production API is the live one and fully functional version. The design has been
 - Ask feedback from trusted 3rd party API heavy consumers we have contact with. Get atleast 5 persons to do review. 
 - Ask feedback to be added to API-portal feedback tab. Accept also direct feedback via other channels. 
 
-## 6. Implement and test
+## 6. Create tests, implement and test
 - Take into account last comments from final review
-- Do code
-- Pull OpenAPI spec from code and store in github. 
+- Define test, implement code. Note! Use automated testing!  
+- Build OpenAPI spec in github (this is linked to APInf.io API at hand). 
 
 ## 7. Release
 
