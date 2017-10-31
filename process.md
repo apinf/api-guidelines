@@ -2,6 +2,13 @@
 
 In APInf we use unified process for Platform API development. Platform APIs are non-profit APIs. Our intention is not to charge clients for using them. They are part of the platform. 
 
+For each platform API we have two versions: 
+- production and 
+- development
+
+Production API is the live one and fully functional version. The design has been frozen. It might change, but changes are not backwards breaking. Development version is the design version of next API version (minor/major changes). 
+
+
 [PIC HERE]
 
 ## 1. Define typical use cases
@@ -10,7 +17,7 @@ In APInf we use unified process for Platform API development. Platform APIs are 
 
 ## 3. Publish design for broad feedback
 
-- Publish the design in apinf.io portal and post a tweet to Twitter (inlclude handle @apinf_io). 
+- Publish the design in apinf.io portal and post a tweet to Twitter (include handle @apinf_io). 
 - Write a blog post about new version development to medium.com/apinf 
 - Everytime you find something that needs to be modified, do it and go to next step. 
 - Most likely you will go back and forth between this step and next step for afew weeks. 
