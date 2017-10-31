@@ -4,9 +4,9 @@ In APInf we use unified process for Platform API development. Platform APIs are 
 
 For each platform API we have two versions: 
 - production and 
-- development
+- design
 
-Production API is the live one and fully functional version. The design has been frozen. It might change, but changes are not backwards breaking. Development version is the design version of next API version (minor/major changes). 
+Production API is the live one and fully functional version. The design has been frozen. It might change, but changes are not backwards breaking. Design version is the next API version (minor/major changes). 
 
 
 [PIC HERE]
@@ -14,6 +14,17 @@ Production API is the live one and fully functional version. The design has been
 ## 1. Define typical use cases
 
 ## 2. Design first
+
+### New API
+
+- If this is the first time API is designed, create new open api spec file
+- Create API in apinf.io portal and add design to the API. 
+
+### New version of existing API
+
+- In case there is already existing production version API. 
+- Create API in apinf.io portal and use lifecycle phase "Design"
+- Add open api spec of the production version with modifications needed based on the new use cases. 
 
 ## 3. Publish design for broad feedback
 
