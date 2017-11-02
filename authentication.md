@@ -12,3 +12,36 @@ Each API documentation must also contain a **login **endpoint. This way the user
 
 Note! Some of the top level GET methods do not need authentication. However, an API key is needed in those cases. It is conveyed as a header parameter in field`X-Api-Key.`
 
+
+
+## Calling API via UI, preparing for a preflight OPTIONS request
+
+When an HTTP request to API is done via a browser, the browser might trigger a CORS preflight request in order to find out, if the original request is allowed. For more details see [https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS.](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+
+Usually APIs in APInf catalog are connected to a \(API Umbrella\) proxy. Because proxy use requires an API key, examining API functionality using Open API documentation UI \(formerly called as Swagger\) is one of those cases, which trigger preflight CORS operation.  
+
+### Steps
+
+1. Original request is sent, e.g. GET /organizations
+   1. request contains header X-Api-Key \(value API key\), which triggers the CORS functionality in browser
+2. Browser sends OPTIONS request to proxy \(same address as original request\)
+   1. request does not contain header X-Api-Key
+   2. request contains header Access-Control-Request-Headers \(value string X-Api-Key\)
+3. **Pitfall 1**
+   1. because of missing header X-Api-Key, the proxy rejects the OPTIONS request causing original operation to fail
+   2. CURE: configure API Umbrella to accept OPTIONS request without header X-Api-Key
+4. \(After configuration\) the API Umbrella accepts the OPTIONS request and conveys it to API
+5. **Pitfall 2**
+   1. When API responds to OPTIONS request, it fills into header Access-Control-Allow-Headers list of allowed headers
+   2. Although API does not necessarily use the X-Api-Key header,_ it has to fill the X-Api-Key header_ into A-C-A-H list in response in addition to other headers
+6. API sends OPTIONS response to API Umbrella
+7. API Umbrella conveys OPTIONS response to the browser
+8. The browser compares A-C-R-H list in original GET request to A-C-A-H list in OPTIONS response
+9. Browser sends
+   1. In case X-Api-Key \(or any of requested headers\) is missing from A-C-A-H, the browser rejects the original request
+   2. In case A-C-R-H and A-C-A-H match, browser sends the original request
+
+### Conclusion:
+
+API must contain a handling for OPTIONS request and it must response with support for X-Api-Key header in order to allow API use also via UI.
+
