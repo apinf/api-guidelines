@@ -8,7 +8,7 @@ Authentication is implemented according to functionality in [Restivus Swagger](h
    2. The login credentials \(a **user ID** and a **authentication token**\) are returned in response.
 3. When sending requests via API, the user gives the login credentials as parameters in header of request message \(in fields `X-User-Id` and `X-Auth-Token`\). 
 
-Each API documentation must also contain a **login **endpoint. This way the user is able to log in and get user ID and Authentication token, which are needed in order to explore the API functionality with OpenAPI \(previously Swagger\) document.
+Each API documentation must also contain a **login **endpoint. This way the user is able to log in and get user ID and Authentication token, which are needed in order to explore the API functionality with OpenAPI \(formerly Swagger\) specification.
 
 Note! Some of the top level GET methods do not need authentication. However, an API key is needed in those cases. It is conveyed as a header parameter in field`X-Api-Key.`
 
@@ -16,7 +16,7 @@ Note! Some of the top level GET methods do not need authentication. However, an 
 
 When an HTTP request to API is done via a browser, the browser might trigger a CORS preflight request in order to find out, if the original request is allowed. For more details see [https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS.](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
-Usually APIs in APInf catalog are connected to a \(API Umbrella\) proxy. Because proxy use requires an API key, examining API functionality using OpenAPI documentation UI \(previously called as Swagger\) is one of those cases, which trigger preflight CORS operation.
+Usually APIs in APInf catalog are connected to a \(API Umbrella\) proxy. Because proxy use requires an API key, examining API functionality using OpenAPI specification UI \(previously called as Swagger\) is one of those cases, which trigger preflight CORS operation.
 
 ### Steps
 
