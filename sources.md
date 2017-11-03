@@ -10,7 +10,9 @@
 
 5. Restivus Swagger \([https://github.com/apinf/restivus-swagger](https://github.com/apinf/restivus-swagger)\), 2017-08-16
 
-6. Wikipedia: List of HTTP status codes \([https://en.wikipedia.org/wiki/List\_of\_HTTP\_status\_codes\](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes\)\), 2017-08-21
+6. Wikipedia: List of HTTP status codes \([https://en.wikipedia.org/wiki/List\_of\_HTTP\_status\_codes\](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes%29\), 2017-08-21
+
+7. OpenAPI documentation \(https://swagger.io/\), 2017-11-03
 
 
 
