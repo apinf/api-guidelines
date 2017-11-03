@@ -10,13 +10,13 @@ In a nutshell:
 * Avoid overlapping functionalities between different APIs.
 * In error case include in the API response verbose description. 
   * include also a description about erroneous parameter value, if it is feasible.
-* Implement in each API \(or bundle of APIs\) ability to generate of its own swagger document about it's functionality.
+* Implement in each API \(or bundle of APIs\) ability to generate of its own OpenAPI document about it's functionality.
 * API must have support for the OPTIONS endpoint
 
 Minimum developer experience
 
 * Each API in production must be in Catalog, connected in proxy and API key must be used in call.
-* Each API must have documentation, either a swagger file or open API specification.
+* Each API must have documentation, preferably OpenAPI specification.
 * The description of API must be sufficient.
 * Each API must have own logo
 
