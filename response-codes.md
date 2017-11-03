@@ -2,11 +2,9 @@
 
 When the client sends a request to the server through an API, the client must know from the feedback the outcome of the request, whether it succeeded or failed. The reason of failure must also be specified.
 
-käytä aina näitä ja miksi...
-
 The server must always return the right status code.
 
-APINf API uses the following HTTP codes in responses.
+APInf APIs use the following HTTP codes in responses.
 
 ## 2xx \(Success category\)
 
@@ -20,7 +18,7 @@ The requested action was received and successfully processed by the server.
 
   * the request was successfully processed, but no content was returned.
 
-    * DELETE can be a good example of this.   
+    * DELETE can be a good example of this.  
       The API `DELETE /organizations/:id/managers/:managerId` will delete the manager `:managerId` .  
       In response we do not need any data in the returned, as we explicitly asked the system to delete the resource instance.
 
