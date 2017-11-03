@@ -20,9 +20,7 @@ If we have resources under a resource, e.g Managers of an Organization, the samp
 * `DELETE /organizations/:id/managers/:managerId` 
   * deletes Manager identified with `:managerId`, which belongs to Organization identified with `:id`
 
-
-
-The paths must contain the **plural form of resources** and the HTTP method must define the **operation** to be performed on the resource. The actual API functionality is implemented under the endpoint in functionality and swagger metadata files.
+The paths must contain the **plural form of resources** and the HTTP method must define the **operation** to be performed on the resource. The actual API functionality is implemented under the endpoint in functionality and OpenAPI metadata files.
 
 ## Documentation of API Endpoint
 
