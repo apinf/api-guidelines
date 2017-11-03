@@ -6,7 +6,7 @@ There are two alternatives to create APIs: design first and code first. For prac
 
 The APInf convention in API documentation is following:
 
-* Each \(for User point of view\) API must generate own OpenAPI document about it's functionality.
+* Each \(for User point of view\) API must generate own OpenAPI specification about it's functionality.
   * Documentation must contain a general level description about functionality
   * Each endpoint must be documented
   * Description of each request and response message
@@ -16,7 +16,7 @@ The APInf convention in API documentation is following:
       * is parameter mandatory or optional
   * Examples of typical use cases.
   * Simple examples of calling API and getting responses.
-* OpenAPI document generation relies on Restivus Swagger plugin \([https://github.com/apinf/restivus-swagger\](https://github.com/apinf/restivus-swagger%29\).
+* OpenAPI specification generation relies on Restivus Swagger plugin \([https://github.com/apinf/restivus-swagger\](https://github.com/apinf/restivus-swagger%29\).
 * Documentation is written in Restivus Swagger documentation description fields.
 * Note! When writing multiline documentation with markdown, use backticks \(\`\`\) instead of single quotes \(''\) as documentation field separators.
 * When adding a functionality in API, the generated documentation must be updated accordingly update
