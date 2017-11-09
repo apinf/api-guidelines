@@ -9,7 +9,7 @@ For each platform API we have two versions:
 
 Production API is the live one and fully functional version. The design has been frozen. It might change, but changes are not backwards breaking. Design version is the next API version \(minor/major changes\).
 
-\[PIC HERE\]
+![API development process](https://raw.githubusercontent.com/apinf/api-guidelines/master/apinf-api-process.png)
 
 ## 1. Define typical use cases
 
