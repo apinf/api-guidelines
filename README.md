@@ -23,7 +23,7 @@ In this guide the following terms are used related to REST APIs
 
 Currently we have three (3) APIs in APInf platform. The design of those is inline with the Design Guide and development is done according to the same API Design Guide (this on you are reading). 
 
-* Catalog REST API ([production version](https://apinf.io/apis/apinf-catalog-rest-api-1), next version design)
+* Catalog REST API ([production version](https://apinf.io/apis/apinf-catalog-rest-api-1), [next version design](https://apinf.io/apis/apinf-catalog-rest-api-design))
 * Management REST API ([production version](https://apinf.io/apis/apinf-management-rest-api), next version design)
 * Analytics REST API ([beta design version](https://apinf.io/apis/apinf-analytics-api))
 
