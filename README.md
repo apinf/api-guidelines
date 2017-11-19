@@ -15,7 +15,7 @@ In this guide the following terms are used related to REST APIs
   * E.g. apis, organizations and users are **resources**
 * **Operation** is a method or set of methods to operate resources
   * list, delete, add, update are the **operations **to be performed on resources
-* **URL** \(Uniform **Resource **Locator\) is a path through which a **resource** can be located and some actions can be performed on it.
+* **URL** \(Uniform **Resource** Locator\) is a path through which a **resource** can be located and some actions can be performed on it.
 * **Collection** is a set of resources.
 
 
